@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./tip.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <h1>SPLI<br>TTER</h1>
+  <div class="container">
+    <div class="inner-left">
+      <p>Bill</p>
+      <div class="wrap">
+        <input type="number" class="billInput" oninput=bill()>
+        <img src="./images/icon-dollar.svg" alt="dolar" class="imgDolar">
+      </div>
+      <p>Number of people</p>
+      <div class="wrap">
+        <input type="number" oninput=people(event) class="brojLjudi">
+        <img src="./images/icon-person.svg" alt="person" class="imgPerson">
+      </div>
+      <p>Select tip %</p>
+      <div class="tipContainer">
+        <button id="tip" value="5" onclick=tip(event)>5%</button>
+        <button id="tip" value="10" onclick=tip(event)>10%</button>
+        <button id="tip" value="15" onclick=tip(event)>15%</button>
+        <button id="tip" value="25" onclick=tip(event)>25%</button>
+        <button id="tip" value="50" onclick=tip(event)>50%</button>
+        <input type="number" class="customInput" oninput=tip(event) placeholder="Custom tip">
+      </div>
+    </div>
+    <div class="inner-right">
+      <div class="tipAmount">
+        <div class="tipAmount-inner-left">Tip Amount<br><span>/per person</span></div>
+        <div class="tipAmount-inner-right">$0.00</div>
+      </div>
+      <div class="totalAmount">
+        <div class="totalAmount-inner-left">Total Amount<br><span>/per person</span></div>
+        <div class="totalAmount-inner-right">$0.00</div>
+      </div>
+      <button class="resetBtn" onclick=resetAll()>RESET</button>
+    </div>
+  </div>
+  <script src="./tip.js"></script>
+</body>
+
+</html>
